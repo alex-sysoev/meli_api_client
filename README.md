@@ -14,4 +14,12 @@ end
 ```
 ## Usage
 
-Comming soon, my bad !
+Fetch all root categories:
+```elixir
+{:ok, roots} = MeliApiClient.Categories.root
+```
+
+Search for items:
+```elixir
+{:ok, items} = MeliApiClient.Items.search(%{q: "Some keyword"})
+```
