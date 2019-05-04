@@ -5,7 +5,7 @@ defmodule MeliApiClient.Base do
   @doc """
   Call MELI endpoint with params and decode the response.
   """
-  @spec get(String.t()) :: {:ok, map()} | {:error, term()}
+  @spec get(String.t()) :: {:ok, map()} | {:ok, [map()]} | {:error, term()}
   def get(endpoint) do
     case HTTPoison.get("#{@url}/#{endpoint}") do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
