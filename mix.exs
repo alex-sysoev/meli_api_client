@@ -24,7 +24,8 @@ defmodule MeliApiClient.MixProject do
     [
       {:httpoison,  "~> 1.5"},
       {:poison, "~> 3.1"},
-      {:timex, "~> 3.1"}
+      {:timex, "~> 3.1"},
+      {:dialyxir, "~> 1.0.0-rc.6", only: [:dev], runtime: false}
     ]
   end
 
